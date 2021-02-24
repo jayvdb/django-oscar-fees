@@ -83,7 +83,7 @@ class AbsoluteFee(Fee):
     def name(self):
         return self._description % {
             'value': currency(self.value),
-            'range': self.range.name.lower()}
+            'range': self.range.name.lower() if self.range else ''}
 
     @property
     def description(self):
