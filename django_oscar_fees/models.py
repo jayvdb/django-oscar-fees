@@ -556,9 +556,8 @@ class FeeLine(models.Model):
 
     def __str__(self):
         return _(
-            u"Basket #%(basket_id)d, Product #%(product_id)d, quantity"
+            u"Basket #%(basket_id)d, quantity"
             u" %(quantity)d") % {'basket_id': self.basket.pk,
-                                 'product_id': self.product.pk,
                                  'quantity': self.quantity}
 
     def save(self, *args, **kwargs):
